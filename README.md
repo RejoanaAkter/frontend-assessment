@@ -1,37 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Recipe App
 
-## Getting Started
+# Description:
 
-First, run the development server:
+- You are provided with an incomplete Recipe App project that uses the free MealDB API to retrieve recipe data. The app needs to showcase some recipes and allows users to add them to a cart. Functionalities after carting is not required for the current MVP. The home page includes a banner section, a top recipes section, and a search option to find recipes by name or ingredients.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# Required New Features:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Basic Authentication: Implement an authentication flow using name, email, phone, and a password.
+- All Recipes Page: Create a page where users can view all recipes.
+- Add Recipe to Cart: Allow users to add recipes to a cart. The cart should store data locally if the user is not logged in, and save it to the user’s account if they are logged in.
+- Bug Fixes: There are at least three, or more features that are currently not working properly. Identify and fix these bugs.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+# Additional Requirements:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Consistent Design Style: Ensure that any new features match the design style of the existing application. Follow basic accessibility standards.
+- Mobile Responsiveness: Make all pages responsive for mobile devices.
 
-## Learn More
+# Documentation Requirements:
 
-To learn more about Next.js, take a look at the following resources:
+- After completion, document under the README section.
+- Features Implemented: Describe the new features you added, in both technical and non-technical terms.
+- Bug Fixes: Briefly list the bugs you identified and fixed.
+- Time Estimate: Indicate the total time spent on the assessment.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# N.B. Documentation should be brief and short, no need to go overboard with it.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# Submission Guidelines:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# frontend-assessment
+- Clone or ZIP Download the existing GitHub Code repository: https://github.com/khalek-repliq/frontend-assessment
+- Get rid of the .git folder from the project.
+- Make your necessary changes and upload your new project into your personal GitHub account as a public repository
+- Host your final version on Vercel, Netlify, Firebase or similar platform and prepare your live link.
+- You must submit your "GitHub Link" & "Live Link"
