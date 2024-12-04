@@ -18,19 +18,31 @@ const RecipesList = () => {
     queryFn: HttpKit.getTopRecipes,
   });
 
+  const { data: searchData, isLoading: loadSearch, error: searchError } = useQuery(
+    {
+      queryKey: ["recipes", searchQuery],
+      queryFn: () => HttpKit.searchRecipesByName(searchQuery), 
+      enabled: !!searchQuery, 
+    }
+  );
+  
   useEffect(() => {
     if (data) {
       setRecipes(data);
     }
-  }, [data]);
+    if(searchData){
+      setRecipes(searchData);
+    }
+  }, [data,searchData]);
 
-  const handleSearch = () => {
+  function handleSearch() {
     setSearchQuery(searchInput);
   };
 
+
   const handleDetailsOpen = (id) => {
     setOpenDetails(true);
-    setRecipeId(id);
+    setRecipeId(parseInt(id));
   };
 
   if (isLoading) return <div>Loading recipes...</div>;
@@ -92,8 +104,7 @@ const RecipesList = () => {
       </div>
 
       {/* Modal*/}
-      <Modal isOpen={openDetails} setIsOpen={setOpenDetails}>
-        <SingleRecipe id={recipeId} setIsOpen={setOpenDetails} />
+     <Modal isOpen={openDetails} setIsOpen={setOpenDetails} recipeId={recipeId} >
       </Modal>
     </div>
   );
